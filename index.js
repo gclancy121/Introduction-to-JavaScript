@@ -189,7 +189,7 @@ function game(user,computer){
    return "error: invalid input";
  }
 } 
-console.log(game('rock','rock'));
+console.log(game('rock', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -232,9 +232,12 @@ Using the annoyingSong function below do the following:
     "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
 */
 
-function annoyingSong(bottles){
-     
-}
+function annoyingSong(numOfBottles) { 
+for (let i=99; i>=0; i--) {
+  return `${numOfBottles} bottles of soda on the wall, ${numOfBottles} bottles of soda, take one down pass it around ${numOfBottles-1} bottles of soda on the wall`
+}}
+ console.log(annoyingSong(99));    
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -252,9 +255,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+if (score<=100&&score>=90){
+  return "you got an A";
+} else if (score<=89&&score>=80) {
+  return "you got a B";
+}else if (score<=79&&score>=70) {
+  return "you got a C";
+}else if (score<=69&&score>=60) {
+  return "you got a D";
+} else{
+  return "you got an F";
 }
+
+}
+console.log(grade(88));
 
 
 
