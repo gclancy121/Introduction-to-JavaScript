@@ -117,11 +117,20 @@ function hungryDog(dogWeight, dogAge){
     return dogWeight*.04;
   } else if (dogWeight<=15 && dogWeight>=11) {
     return dogWeight*.03;
-  } else if (dogWeight>15) {
+  } else {
     return dogWeight*.02;
   }
-} }
-console.log(hungryDog(15,1));
+} else {
+  if (dogAge<=.33 && dogAge>.167) {
+    return dogWeight*.1;
+  } else if (dogAge<=.167 && dogAge>.583) {
+    return dogWeight*.05;
+  } else {
+    return dogWeight*.04;
+  }
+}
+}
+console.log('task 3', hungryDog(5,.3));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -147,11 +156,40 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+// 0 is rock, 1 is paper, 2 is scissors
+let computer=Math.floor(Math.random()*3)
+if (computer === 0) {
+  computer='rock';
+} else if (computer===1) {
+  computer= 'paper'; 
+} else {
+  computer= 'scissors';
 }
+function game(user,computer){
 
-
+ if (computer === 'rock' && user === 'rock') {
+   return "it's a tie";
+ } else if (computer === 'rock' && user === 'paper' ) {
+   return "you win!";
+ } else if (computer==='rock'&& user === "scissors") {
+   return "you lose!";
+ } else if (computer==='paper' && user==='rock') {
+   return "you lose!";
+ } else if (computer==='paper' && user==='paper') {
+  return "it's a tie";
+ } else if (computer==='paper' && user==='scissors') {
+  return "you win!"; 
+ } else if (computer==='scissors' && user==='rock') {
+   return "you win!";
+ } else if(computer==='scissors' && user==='paper') {
+   return "you lose!";
+ } else if (computer==='scissors' && user==='scissors') {
+   return "it's a tie";
+ } else{
+   return "error: invalid input";
+ }
+} 
+console.log(game('rock','rock'));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -164,8 +202,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+ return km*.621371;
 }
 
 
@@ -178,8 +216,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm/30.48;
 }
 
 
@@ -194,8 +232,8 @@ Using the annoyingSong function below do the following:
     "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(bottles){
+     
 }
 
 
